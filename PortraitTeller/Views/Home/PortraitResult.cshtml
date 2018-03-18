@@ -1,0 +1,15 @@
+﻿@model PortraitTeller.Models.ImageInfo
+@{
+    ViewBag.Title = "PortraitResult";
+}
+
+<h2>PortraitResult</h2>
+<div class="mdl-grid centered">
+
+    <img src="@Model.ImageUrl" alt="Yo Face!" />
+    @foreach (var info in Model.FaceInfo)
+    {
+        <p>Gender: @info.FaceAttributes.Gender</p>
+    }
+
+</div>
