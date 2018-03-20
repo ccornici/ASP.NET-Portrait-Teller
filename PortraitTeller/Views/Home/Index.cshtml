@@ -4,15 +4,20 @@
 
 <div class="mdl-grid centered">
     <!-- Simple Textfield -->
-    <form action="home/processImage">
-        <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input"
-                   type="text"
-                   value="http://www.dreams.metroeve.com/wp-content/uploads/2017/05/dreams.metroeve_face-dreams-meaning.jpg"
-                   name="imageUrl"
-                   id="imageUrl">
-            <label class="mdl-textfield__label" for="imageUrl">Image URL</label>
+    <div class="mdl-card mdl-shadow--4dp main-card">
+        <div class="mdl-card__title">The Face Teller</div>
+        <div class="mdl-grid">
+            <form action="home/processImage">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input"
+                           type="text"
+                           value="http://www.dreams.metroeve.com/wp-content/uploads/2017/05/dreams.metroeve_face-dreams-meaning.jpg"
+                           name="imageUrl"
+                           id="imageUrl">
+                    <label class="mdl-textfield__label" for="imageUrl">Image URL</label>
+                </div>
+                <input type="submit" value="Process Image" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" />
+            </form>
         </div>
-    </form>
-
+    </div>
 </div>

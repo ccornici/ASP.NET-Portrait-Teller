@@ -26,3 +26,7 @@ textarea {
 .centered {
     max-width: 500px;
 }
+
+.main-card.mdl-card {
+    width: 100%;
+}
