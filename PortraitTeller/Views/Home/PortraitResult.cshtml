@@ -3,13 +3,19 @@
     ViewBag.Title = "PortraitResult";
 }
 
-<h2>PortraitResult</h2>
 <div class="mdl-grid centered">
-
-    <img src="@Model.ImageUrl" alt="Yo Face!" />
-    @foreach (var info in Model.FaceInfo)
-    {
-        <p>Gender: @info.FaceAttributes.Gender</p>
-    }
-
+    <div class="mdl-card mdl-shadow--4dp main-card">
+        <div class="mdl-card__media">
+            <img class="image-card" src="@Model.ImageUrl">
+        </div>
+        @foreach (var info in Model.FaceInfo)
+        {
+            <p>Gender: @info.FaceAttributes.Gender</p>
+        }
+        <div class="mdl-card__actions mdl-card--border">
+            <a href="@Url.Action("Index", "Home")" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                New image
+            </a>
+        </div>
+    </div>
 </div>
