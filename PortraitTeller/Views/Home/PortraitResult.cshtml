@@ -8,10 +8,28 @@
         <div class="mdl-card__media">
             <img class="image-card" src="@Model.ImageUrl">
         </div>
+
         @foreach (var info in Model.FaceInfo)
         {
-            <p>Gender: @info.FaceAttributes.Gender</p>
+            <ul class="mdl-list">
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        Age: @info.FaceAttributes.Age
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        Gender: @info.FaceAttributes.Gender
+                    </span>
+                </li>
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        Smiling: @(info.FaceAttributes.Smile > 0.5 ? "yes" : "no")
+                    </span>
+                </li>
+            </ul>
         }
+
         <div class="mdl-card__actions mdl-card--border">
             <a href="@Url.Action("Index", "Home")" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 New image
